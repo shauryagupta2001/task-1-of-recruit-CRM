@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Advanced Search</title>
+</head>
+<body>
+    <h1 style="text-align: center;">This is advance search button to search data in table </h1>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <button id="open-popup" class="primary-button">Advanced Search</button>
+        <button id="reset-filter" class="danger-button">Reset Filter</button>
+    
+    </div>
+   
+
+    <div id="search-popup" class="search-popup">
+        <div class="search-container">
+            <input type="text" id="search-input-popup" placeholder="Search..."><br><br>
+            <div id="search-chips" class="search-chips">
+                <!-- Search text chips will be added here dynamically -->
+            </div>
+            <button id="clear-search" class="primary-button">Clear Search</button><br><br>
+            <button id="apply-filter" class="primary-button">Apply Filter</button>
+        </div>
+    </div>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Title</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Shaurya Gupta</td>
+                <td>Shoanak mailapurkar</td>
+                <td>developer</td>
+                <td>shaurya2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Rohan gupta</td>
+                <td>shoanak mailapurkar</td>
+                <td>database</td>
+                <td>rohan001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Mohit gupta</td>
+                <td>shoanak mailapurkar</td>
+                <td>full stack</td>
+                <td>mohit2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Sahil jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>data science</td>
+                <td>sahil2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Mukuk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>rohit jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>rohit2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Shivam jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>mapitjain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mapit2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>mapit gupta</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mapit2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>sjjscjs jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>kfdkk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>owkodkoe jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>jnfjd2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Muwk jain</td>
+                <td>shoanak mailapurkar</td>
+                <td>ui/ux</td>
+                <td>mukskskuk2001gupta19@gmail.com</td>
+            </tr>
+            <!-- Table data rows go here -->
+            <!-- Add more rows as needed -->
+        </tbody>
+        
+    </table>
+
+    <div class="todo-container">
+        <h2>ToDo List</h2>
+        <ul id="todo-list"></ul>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+}
+
+.danger-button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.danger-button:hover {
+    background-color: #c82333;
+}
+
+.search-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding: 20px;
+}
+
+.search-popup .search-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#open-popup {
+    margin: 20px;
+    cursor: pointer;
+}
+
+#search-input-popup {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-chips {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.search-chip {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-filter {
+    margin: 20px;
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px;
+}
+
+.todo-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#todo-list {
+    list-style-type: none;
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search-input');
+    const searchInputPopup = document.getElementById('search-input-popup');
+    const searchChips = document.getElementById('search-chips');
+    const dataTable = document.getElementById('data-table');
+    const todoList = document.getElementById('todo-list');
+    const openPopupButton = document.getElementById('open-popup');
+    const searchPopup = document.getElementById('search-popup');
+    const clearSearchButton = document.getElementById('clear-search');
+    const applyFilterButton = document.getElementById('apply-filter');
+    const resetFilterButton = document.getElementById('reset-filter');
+
+    // Function to show the search popup
+    function showSearchPopup() {
+        searchPopup.style.display = 'block';
+    }
+
+    // Function to hide the search popup
+    function hideSearchPopup() {
+        searchPopup.style.display = 'none';
+    }
+
+    openPopupButton.addEventListener('click', showSearchPopup);
+
+    clearSearchButton.addEventListener('click', function() {
+        searchInputPopup.value = '';
+        searchChips.innerHTML = ''; // Clear search chips
+    });
+
+    applyFilterButton.addEventListener('click', function() {
+        const searchValue = searchInputPopup.value.toLowerCase();
+        const rows = dataTable.querySelectorAll('tbody tr');
+
+        todoList.innerHTML = ''; // Clear the todo list
+
+        rows.forEach(row => {
+            const name = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
+            const category = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+            if (name.includes(searchValue) || category.includes(searchValue)) {
+                // Display matching rows in the table
+                row.style.display = 'table-row';
+
+                // Create to-do items for matching rows
+                const todoItem = document.createElement('li');
+                todoItem.textContent = `To-Do: ${name} - ${category}`;
+                todoList.appendChild(todoItem);
+            } else {
+                row.style.display = 'none'; // Hide non-matching rows
+            }
+        });
+
+        // Add search text as a chip
+        if (searchValue.trim() !== '') {
+            createSearchChip(searchValue);
+        }
+
+        hideSearchPopup(); // Close the popup after applying the filter
+    });
+
+    resetFilterButton.addEventListener('click', function() {
+        searchInputPopup.value = '';
+        searchChips.innerHTML = ''; // Clear search chips
+        todoList.innerHTML = ''; // Clear the todo list
+        const rows = dataTable.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            row.style.display = 'table-row'; // Show all rows
+        });
+    });
+
+    // Create a search chip and add it to the search chips container
+    function createSearchChip(searchText) {
+        const chip = document.createElement('span');
+        chip.classList.add('search-chip');
+        chip.textContent = searchText;
+
+        // Attach an event listener to remove the chip when clicked
+        chip.addEventListener('click', function() {
+            searchChips.removeChild(chip);
+            searchInputPopup.value = ''; // Clear the search input
+            applyFilterButton.click(); // Trigger the filter function
+        });
+
+        searchChips.appendChild(chip);
+    }
+
+    // Capture Enter key press in the search input
+    searchInputPopup.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            const searchText = searchInputPopup.value.trim();
+            if (searchText !== '') {
+                createSearchChip(searchText);
+            }
+        }
+    });
+});
+
+</script>
